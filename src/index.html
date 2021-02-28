@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Editor</title>
+		<xml id="toolbox" style="display: none">
+			<block type="controls_if"></block>
+			<block type="controls_repeat_ext"></block>
+			<block type="logic_compare"></block>
+			<block type="math_number"></block>
+			<block type="math_arithmetic"></block>
+			<block type="text"></block>
+			<block type="text_print"></block>
+			<block type="color_test"></block>
+		</xml>
+		<style>
+			#blocklyAttribution {
+				background-image: url(https://developers.google.com/blockly/images/logos/logo_built_on.svg);
+				width: 200px;
+				height: 50px;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			#blocklyArea {
+				width: 100vw;
+				height: 80vh;
+			}
+			#blocklyDiv {
+				position: absolute;
+			}
+			#codeText {
+				min-width: 50%;
+				min-height: 60px;
+				resize: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="blocklyArea"> </div>
+		<div id="blocklyDiv"></div>
+		<br/>
+		<button id="fileOutput">Download</button>
+		<input type="file" id="fileInput" />
+		<br/>
+		<textarea id="codeText" readonly></textarea>
+		<br/>
+		<div id="blocklyAttribution"></div>
+	</body>
+</html>
