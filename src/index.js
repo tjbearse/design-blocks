@@ -1,6 +1,6 @@
 const Blockly = require('blockly');
 import './blocks';
-import './generator';
+import './definitions/generator';
 import BlocklyStorage from './storage';
 import {download, wrapWithFileReader} from './files';
 

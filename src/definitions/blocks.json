@@ -1,0 +1,447 @@
+[{
+  "type": "moves_move",
+  "message0": "%1 %2 Effects %3 Abilities %4",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "NAME",
+      "text": "name"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "MoveEffects",
+      "check": "MoveEffect"
+    },
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Array"
+    }
+  ],
+  "colour": 120,
+  "tooltip": "Defines a move",
+  "helpUrl": ""
+},
+{
+  "type": "moves_effects_damage",
+  "message0": "Do %1 damage to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "DAMAGE"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "TARGET",
+      "options": [
+        [
+          "any target",
+          "ANY"
+        ],
+        [
+          "the same target",
+          "SAME"
+        ],
+        [
+          "a teammate",
+          "TEAMMATE"
+        ],
+        [
+          "Yourself",
+          "SELF"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 0,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_effects_heal",
+  "message0": "Heal %1 %2 for %3",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "Yourself",
+          "SELF"
+        ],
+        [
+          "any target",
+          "TARGET"
+        ],
+        [
+          "the same target",
+          "SAME"
+        ],
+        [
+          "an enemy",
+          "ENEMY"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 120,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_dice",
+  "message0": "roll %1 d %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Number"
+    },
+    {
+      "type": "field_number",
+      "name": "TYPE",
+      "value": 6,
+      "min": 1
+    }
+  ],
+  "output": "Array",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_die",
+  "message0": "roll 1d %1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "TYPE",
+      "value": 6,
+      "min": 1
+    }
+  ],
+  "output": "Number",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "function_filter",
+  "message0": "filter %1 where %2 %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "COLLECTION",
+      "check": "Array"
+    },
+    {
+      "type": "field_variable",
+      "name": "ITEMVAR",
+      "variable": "item"
+    },
+    {
+      "type": "input_value",
+      "name": "PREDICATE",
+      "check": "Boolean"
+    }
+  ],
+  "output": "Array",
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "function_choose_playerchoice",
+  "message0": "Choose %1 from %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    },
+    {
+      "type": "input_value",
+      "name": "COLLECTION",
+      "check": "Array"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "function_map",
+  "message0": "map %1 from %2 to %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "COLLECTION",
+      "check": "Array"
+    },
+    {
+      "type": "field_variable",
+      "name": "ITEMVAR",
+      "variable": "item"
+    },
+    {
+      "type": "input_value",
+      "name": "PREDICATE"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_ability",
+  "message0": "Ability %1 %2 %3",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "NAME",
+      "text": "default"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "TRIGGERS"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_ability_damage",
+  "message0": "%1 %2 %3 for %4 %5 %6",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "TIMING",
+      "options": [
+        [
+          "before",
+          "BEFORE"
+        ],
+        [
+          "after",
+          "AFTER"
+        ]
+      ]
+    },
+    {
+      "type": "field_dropdown",
+      "name": "EVENT",
+      "options": [
+        [
+          "receive damage",
+          "IN_DAMAGE"
+        ],
+        [
+          "give damage",
+          "OUT_DAMAGE"
+        ],
+        [
+          "receive healed",
+          "IN_HEAL"
+        ],
+        [
+          "give heal",
+          "OUT_HEAL"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_variable",
+      "name": "DAMAGEVAR",
+      "variable": "amount"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_card",
+  "message0": "%1 of %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "RANK",
+      "options": [
+        [
+          "Ace",
+          "ACE"
+        ],
+        [
+          "2",
+          "TWO"
+        ],
+        [
+          "3",
+          "THREE"
+        ],
+        [
+          "4",
+          "FOUR"
+        ],
+        [
+          "5",
+          "FIVE"
+        ],
+        [
+          "6",
+          "SIX"
+        ],
+        [
+          "7",
+          "SEVEN"
+        ],
+        [
+          "8",
+          "EIGHT"
+        ],
+        [
+          "9",
+          "NINE"
+        ],
+        [
+          "10",
+          "TEN"
+        ],
+        [
+          "Jack",
+          "JACK"
+        ],
+        [
+          "Queen",
+          "QUEEN"
+        ],
+        [
+          "King",
+          "KING"
+        ]
+      ]
+    },
+    {
+      "type": "field_dropdown",
+      "name": "SUIT",
+      "options": [
+        [
+          "Clubs",
+          "CLUBS"
+        ],
+        [
+          "Diamonds",
+          "DIAMONDS"
+        ],
+        [
+          "Hearts",
+          "HEARTS"
+        ],
+        [
+          "Spades",
+          "SPADES"
+        ]
+      ]
+    }
+  ],
+  "output": "Card",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_deck_create",
+  "message0": "make deck",
+  "output": "Deck",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_deck_draw",
+  "message0": "draw from %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "DECK"
+    }
+  ],
+  "output": "Card",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_deck_draw_multiple",
+  "message0": "draw %1 from %2",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "NUMBER",
+      "value": 0,
+      "min": 1
+    },
+    {
+      "type": "input_value",
+      "name": "DECK"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Array",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_game_pieces_deck_draw_input_multiple",
+  "message0": "draw %1 from %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NUMBER"
+    },
+    {
+      "type": "input_value",
+      "name": "DECK"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Array",
+  "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+}]

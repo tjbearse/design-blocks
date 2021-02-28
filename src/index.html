@@ -2,16 +2,7 @@
 <html>
 	<head>
 		<title>Editor</title>
-		<xml id="toolbox" style="display: none">
-			<block type="controls_if"></block>
-			<block type="controls_repeat_ext"></block>
-			<block type="logic_compare"></block>
-			<block type="math_number"></block>
-			<block type="math_arithmetic"></block>
-			<block type="text"></block>
-			<block type="text_print"></block>
-			<block type="color_test"></block>
-		</xml>
+		<%= require('html-loader!./definitions/toolbox.xml').default %>
 		<style>
 			#blocklyAttribution {
 				background-image: url(https://developers.google.com/blockly/images/logos/logo_built_on.svg);
