@@ -22,17 +22,27 @@
 			}
 			#blocklyArea {
 				width: 100vw;
-				height: 100vh;
+				height: 80vh;
 			}
 			#blocklyDiv {
 				position: absolute;
+			}
+			#codeText {
+				min-width: 50%;
+				min-height: 60px;
+				resize: none;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="blocklyArea"> </div>
 		<div id="blocklyDiv"></div>
+		<br/>
+		<button id="fileOutput">Download</button>
+		<input type="file" id="fileInput" />
+		<br/>
+		<textarea id="codeText" readonly></textarea>
+		<br/>
 		<div id="blocklyAttribution"></div>
-		<div id="codeText"></div>
 	</body>
 </html>

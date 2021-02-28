@@ -8,7 +8,8 @@
 		"html-webpack-plugin": "^5.2.0"
 	},
 	"scripts": {
-		"build": "webpack"
+		"build": "webpack",
+		"watch": "webpack --watch"
 	},
 	"author": "",
 	"license": "ISC",
