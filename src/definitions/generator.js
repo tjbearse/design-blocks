@@ -1,7 +1,7 @@
 Blockly.JavaScript['moves_move'] = function(block) {
   var text_name = block.getFieldValue('NAME');
   var statements_moveeffects = Blockly.JavaScript.statementToCode(block, 'MoveEffects');
-  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_abilities = Blockly.JavaScript.statementToCode(block, 'Abilities');
   // TODO: Assemble JavaScript into code variable.
   var code = '...;\n';
   return code;
@@ -51,7 +51,7 @@ Blockly.JavaScript['function_filter'] = function(block) {
 };
 
 Blockly.JavaScript['function_choose_playerchoice'] = function(block) {
-  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NUM', Blockly.JavaScript.ORDER_ATOMIC);
   var value_collection = Blockly.JavaScript.valueToCode(block, 'COLLECTION', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = '...';
@@ -126,4 +126,12 @@ Blockly.JavaScript['moves_combatants'] = function(block) {
   var code = '...';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['moves_ability_restrict'] = function(block) {
+  var value_target = Blockly.JavaScript.valueToCode(block, 'TARGET', Blockly.JavaScript.ORDER_ATOMIC);
+  var text_restriction = block.getFieldValue('RESTRICTION');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
 };

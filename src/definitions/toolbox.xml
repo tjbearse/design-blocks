@@ -22,14 +22,12 @@
     <block type="moves_combatants">
       <field name="SIDE">TEAM</field>
     </block>
-    <block type="moves_ability">
-      <field name="NAME">default</field>
-    </block>
     <block type="moves_ability_damage">
       <field name="TIMING">BEFORE</field>
       <field name="EVENT">IN_DAMAGE</field>
       <field name="DAMAGEVAR" id="h9d!9++f7rqxj*)mzoy.">amount</field>
     </block>
+	<block type="moves_ability_restrict"/>
   </category>
   <category name="Game Pieces" colour="#5b80a5">
     <block type="moves_game_pieces_dice">
@@ -373,7 +371,13 @@
     <block type="function_map">
       <field name="ITEMVAR" id="/,)_/7Mtrb4AsTiotkYr">item</field>
     </block>
-    <block type="function_choose_playerchoice"></block>
+    <block type="function_choose_playerchoice">
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+	</block>
     <block type="function_filter">
       <field name="ITEMVAR" id="/,)_/7Mtrb4AsTiotkYr">item</field>
     </block>
