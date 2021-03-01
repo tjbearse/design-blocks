@@ -5,9 +5,22 @@
     </block>
     <block type="moves_effects_damage">
       <field name="TARGET">ANY</field>
+      <value name="DAMAGE">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
     </block>
     <block type="moves_effects_heal">
       <field name="NAME">SELF</field>
+      <value name="NAME">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="moves_combatants">
+      <field name="SIDE">TEAM</field>
     </block>
     <block type="moves_ability">
       <field name="NAME">default</field>
@@ -21,6 +34,11 @@
   <category name="Game Pieces" colour="#5b80a5">
     <block type="moves_game_pieces_dice">
       <field name="TYPE">6</field>
+      <value name="NAME">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
     </block>
     <block type="moves_game_pieces_die">
       <field name="TYPE">6</field>
@@ -31,10 +49,13 @@
     </block>
     <block type="moves_game_pieces_deck_create"></block>
     <block type="moves_game_pieces_deck_draw"></block>
-    <block type="moves_game_pieces_deck_draw_multiple">
-      <field name="NUMBER">1</field>
+    <block type="moves_game_pieces_deck_draw_input_multiple">
+      <value name="NUMBER">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
     </block>
-    <block type="moves_game_pieces_deck_draw_input_multiple"></block>
   </category>
   <sep></sep>
   <category name="Logic" colour="#5b80a5">

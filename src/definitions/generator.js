@@ -111,8 +111,8 @@ Blockly.JavaScript['moves_game_pieces_deck_draw'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['moves_game_pieces_deck_draw_multiple'] = function(block) {
-  var number_number = block.getFieldValue('NUMBER');
+Blockly.JavaScript['moves_game_pieces_deck_draw_input_multiple'] = function(block) {
+  var value_number = Blockly.JavaScript.valueToCode(block, 'NUMBER', Blockly.JavaScript.ORDER_ATOMIC);
   var value_deck = Blockly.JavaScript.valueToCode(block, 'DECK', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = '...';
@@ -120,9 +120,8 @@ Blockly.JavaScript['moves_game_pieces_deck_draw_multiple'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['moves_game_pieces_deck_draw_input_multiple'] = function(block) {
-  var value_number = Blockly.JavaScript.valueToCode(block, 'NUMBER', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_deck = Blockly.JavaScript.valueToCode(block, 'DECK', Blockly.JavaScript.ORDER_ATOMIC);
+Blockly.JavaScript['moves_combatants'] = function(block) {
+  var dropdown_side = block.getFieldValue('SIDE');
   // TODO: Assemble JavaScript into code variable.
   var code = '...';
   // TODO: Change ORDER_NONE to the correct strength.

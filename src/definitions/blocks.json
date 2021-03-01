@@ -406,27 +406,6 @@
   "helpUrl": ""
 },
 {
-  "type": "moves_game_pieces_deck_draw_multiple",
-  "message0": "draw %1 from %2",
-  "args0": [
-    {
-      "type": "field_number",
-      "name": "NUMBER",
-      "value": 0,
-      "min": 1
-    },
-    {
-      "type": "input_value",
-      "name": "DECK"
-    }
-  ],
-  "inputsInline": true,
-  "output": "Array",
-  "colour": 210,
-  "tooltip": "",
-  "helpUrl": ""
-},
-{
   "type": "moves_game_pieces_deck_draw_input_multiple",
   "message0": "draw %1 from %2",
   "args0": [
@@ -442,6 +421,35 @@
   "inputsInline": true,
   "output": "Array",
   "colour": 210,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "moves_combatants",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "SIDE",
+      "options": [
+        [
+          "all teammates",
+          "TEAM"
+        ],
+        [
+          "all enemies",
+          "ENEMY"
+        ],
+        [
+          "all combatants",
+          "ALL"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 0,
   "tooltip": "",
   "helpUrl": ""
 }]
